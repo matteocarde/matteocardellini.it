@@ -233,8 +233,8 @@ a.btn:hover {
   display: inline-block;
   background: none;
 }
-.page-nav-wrapper .page-nav li:hover,
-.page-nav-wrapper .page-nav li:active {
+.page-nav-wrapper .page-nav li:active,
+.page-nav-wrapper .page-nav li:hover {
   background: none;
 }
 .page-nav-wrapper .page-nav li.active a {
@@ -248,9 +248,9 @@ a.btn:hover {
 .page-nav-wrapper .page-nav li a:hover {
   color: #fff;
 }
-.page-nav-wrapper .page-nav li a:hover,
 .page-nav-wrapper .page-nav li a:active,
-.page-nav-wrapper .page-nav li a:focus {
+.page-nav-wrapper .page-nav li a:focus,
+.page-nav-wrapper .page-nav li a:hover {
   background: none;
 }
 .page-nav-wrapper .page-nav li:last-child {
@@ -349,6 +349,15 @@ a.btn:hover {
   position: absolute;
   left: -280px;
   top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .timeline .job-meta .title {
   font-size: 18px;
@@ -356,6 +365,16 @@ a.btn:hover {
 }
 .timeline .job-meta .time {
   color: #8a8a8a;
+}
+.timeline .job-meta .tags-container .skill-tag {
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+  padding: 3px 4px;
+  display: inline-block;
+  margin: 2px 2px 4px 0;
+  border: 1px solid #f5f5f5;
+  font-weight: 500;
+  font-size: 14px;
 }
 .timeline .job-desc {
   color: #666;
@@ -370,11 +389,11 @@ a.btn:hover {
   font-size: 18px;
   color: #00BCD4;
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .education-section .education-body {
   font-weight: 500;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 16px;
   font-weight: 300;
 }
@@ -486,20 +505,17 @@ a.btn:hover {
   border: none;
   width: 10px;
   height: 10px;
-  margin: 0;
-  margin-right: 5px;
+  margin: 0 5px 0 0;
 }
 .testimonials-section .carousel-indicators li.active {
   background-color: #00BCD4;
   width: 10px;
   height: 10px;
-  margin: 0;
-  margin-right: 5px;
+  margin: 0 5px 0 0;
 }
 .portfolio-section .filters {
   list-style: none;
-  margin: 0 auto;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
   text-align: center;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -544,8 +560,7 @@ a.btn:hover {
   opacity: 0.9;
 }
 .portfolio-section .item-inner .content {
-  padding: 30px;
-  padding-bottom: 75px;
+  padding: 30px 30px 75px;
   position: relative;
 }
 .portfolio-section .item-inner .content a {
@@ -575,8 +590,7 @@ a.btn:hover {
 }
 .contact-section .intro {
   position: relative;
-  padding: 30px;
-  padding-left: 190px;
+  padding: 30px 30px 30px 190px;
   font-size: 16px;
   color: #666;
 }
