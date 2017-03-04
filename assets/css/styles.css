@@ -344,6 +344,10 @@ a.btn:hover {
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 300;
+  color: #00626e;
+}
+.timeline .place a {
+  color: #00626e;
 }
 .timeline .job-meta {
   position: absolute;
@@ -384,6 +388,29 @@ a.btn:hover {
 }
 .education-section .item-inner {
   padding: 0 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.education-section .school-logo {
+  height: 100px;
+}
+.education-section .text-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 16px;
 }
 .education-section .degree {
   font-size: 18px;
@@ -399,7 +426,6 @@ a.btn:hover {
 }
 .education-section .time {
   color: #8a8a8a;
-  margin-bottom: 15px;
 }
 .education-section .desc {
   color: #666;
@@ -408,11 +434,11 @@ a.btn:hover {
   font-size: 18px;
   color: #8a8a8a;
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom: 8px;
   font-weight: 300;
 }
 .skills-section .top-skills {
-  margin-bottom: 60px;
+  margin-bottom: 16px;
 }
 .skills-section .top-skills .item {
   margin-bottom: 45px;
@@ -559,8 +585,20 @@ a.btn:hover {
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
+.portfolio-section .item-inner .figure {
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-color: #00626e;
+  background-repeat: no-repeat;
+}
+.portfolio-section .item-inner .figure.contain {
+  padding: 35px;
+  background-size: 90%;
+}
 .portfolio-section .item-inner .content {
-  padding: 30px 30px 75px;
+  height: 170px;
+  padding: 30px;
   position: relative;
 }
 .portfolio-section .item-inner .content a {
@@ -580,6 +618,10 @@ a.btn:hover {
   bottom: 30px;
   left: 30px;
 }
+.portfolio-section .item-inner .content .action i {
+  font-size: 30px;
+  margin-right: 4px;
+}
 .portfolio-section .item-inner .link-mask {
   display: block;
   position: absolute;
@@ -587,6 +629,9 @@ a.btn:hover {
   height: 100%;
   left: 0;
   top: 0;
+}
+.contact-section .section-title {
+  margin-bottom: 0;
 }
 .contact-section .intro {
   position: relative;
@@ -597,6 +642,9 @@ a.btn:hover {
 .contact-section .intro .profile-image {
   width: 120px;
   height: 120px;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  border: 4px solid #00BCD4;
   position: absolute;
   left: 30px;
 }
