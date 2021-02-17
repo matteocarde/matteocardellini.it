@@ -687,6 +687,9 @@ a.btn:hover {
 .footer .container a {
   color: #8a8a8a;
 }
+.publications-section h2 {
+  margin-bottom: 4px;
+}
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .header .social {
@@ -948,4 +951,5 @@ a.btn:hover {
 .config-panel .close .fa {
   color: #fff;
 }
+
 /*# sourceMappingURL=styles.css.map */
