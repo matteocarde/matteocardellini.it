@@ -690,6 +690,12 @@ a.btn:hover {
 .publications-section h2 {
   margin-bottom: 4px;
 }
+.publications-section .publication {
+  padding: 4px;
+}
+.publications-section .publication:not(:last-of-type) {
+  border-bottom: 1px solid whitesmoke;
+}
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .header .social {
