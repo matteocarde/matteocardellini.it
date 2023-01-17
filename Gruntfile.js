@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 			},
 			serve: {
 				files: {
-					"assets/css/styles.css" : "assets/css/styles.css"
+					"assets/css/styles.css": "assets/css/styles.css"
 				}
 			}
 		},
@@ -35,7 +35,8 @@ module.exports = function(grunt) {
 					sourceMap: false,
 				},
 				files: {
-					"assets/css/styles.css" : "assets/less/styles.less"
+					"assets/css/styles.css": "assets/less/styles.less",
+					"calendar/index.css": "calendar/index.less"
 				}
 			}
 		},
@@ -74,7 +75,7 @@ module.exports = function(grunt) {
 				files: ["Gruntfile.js"]
 			},
 			less: {
-				files: ["assets/less/**/*.less"],
+				files: ["assets/less/**/*.less", "calendar/*.less"],
 				tasks: ["less:serve", "autoprefixer:serve"]
 			},
 			// styles: {
@@ -86,6 +87,7 @@ module.exports = function(grunt) {
 					livereload: true
 				},
 				files: ["index.html",
+					"calendar/*.html",
 					"assets/{,*/}*.css",
 					"assets/images/**"
 				]

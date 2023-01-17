@@ -1,0 +1,43 @@
+body,
+html {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+body .calendar-page,
+html .calendar-page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #00a5bb;
+  align-items: center;
+  justify-content: center;
+}
+body .calendar-page .calendar-container,
+html .calendar-page .calendar-container {
+  display: flex;
+  flex: 0 0 70%;
+  flex-direction: column;
+  width: 50%;
+}
+body .calendar-page .calendar-container h1,
+html .calendar-page .calendar-container h1 {
+  flex: 0 0 80px;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+body .calendar-page .calendar-container .calendar-content,
+html .calendar-page .calendar-container .calendar-content {
+  background-color: white;
+  flex: 1;
+  box-shadow: 0 1px 4px 0 #00000024;
+}
