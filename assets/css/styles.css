@@ -257,7 +257,7 @@ a.btn:hover {
   margin-right: 0;
 }
 .wrapper {
-  padding-top: 60px;
+  padding-top: 18px;
   padding-bottom: 60px;
 }
 .section {
@@ -695,6 +695,111 @@ a.btn:hover {
 }
 .publications-section .publication:not(:last-of-type) {
   border-bottom: 1px solid whitesmoke;
+}
+.biblio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.biblio .biblio-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 16px;
+}
+@media (max-width: 500px) {
+  .biblio .biblio-container {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+            align-self: stretch;
+  }
+}
+@media (max-width: 360px) {
+  .biblio .biblio-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+.biblio .biblio-container .biblio-param-card {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 150px;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 4px;
+}
+@media (max-width: 500px) {
+  .biblio .biblio-container .biblio-param-card {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+.biblio .biblio-container .biblio-param-card .biblio-param {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  text-align: center;
+  padding: 4px;
+}
+.biblio .biblio-container .biblio-param-card .biblio-param h3 {
+  text-align: center;
+  color: darkgray;
+  margin: 0;
+  font-size: 16px;
+}
+.biblio .biblio-container .biblio-param-card .biblio-param h1 {
+  margin: 0;
 }
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {

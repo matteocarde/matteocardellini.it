@@ -276,7 +276,7 @@ a.btn {
 }
 
 .wrapper {
-  padding-top: 60px;
+  padding-top: 18px;
   padding-bottom: 60px;
 }
 
@@ -765,6 +765,58 @@ a.btn {
 
     &:not(:last-of-type) {
       border-bottom: 1px solid whitesmoke;
+    }
+  }
+}
+
+.biblio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .biblio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    @media (max-width: 500px) {
+      flex: 1;
+      align-self: stretch;
+    }
+    @media (max-width: 360px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .biblio-param-card {
+      flex: 0 0 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+      @media (max-width: 500px) {
+        flex: 1;
+      }
+
+      .biblio-param {
+        flex: 1;
+        background-color: white;
+        .box-shadow(0 1px 4px 0 rgba(0,0,0,0.14));
+        text-align: center;
+        padding: 4px;
+
+        h3 {
+          text-align: center;
+          color: darkgray;
+          margin: 0;
+          font-size: 16px;
+        }
+
+        h1 {
+          margin: 0;
+        }
+      }
     }
   }
 }
