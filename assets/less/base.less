@@ -43,7 +43,7 @@ a.btn {
   color: #fff;
   padding: 8px 15px;
   .border-radius(2px);
-  .box-shadow(0 2px 4px 0 rgba(0,0,0,0.4));
+  .box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.4));
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
@@ -64,7 +64,7 @@ a.btn {
   width: 36px;
   height: 36px;
   .border-radius(50%);
-  .box-shadow(0 6px 10px 0 rgba(0,0,0,0.3));
+  .box-shadow(0 6px 10px 0 rgba(0, 0, 0, 0.3));
 
   &:hover {
     background: darken(@theme-color, 15%);
@@ -135,12 +135,12 @@ a.btn {
 
   .profile-image {
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     border: 5px solid white;
-    top: -80px;
-    margin-left: -80px;
+    top: -100px;
+    margin-left: -100px;
     left: 50%;
   }
 
@@ -160,7 +160,7 @@ a.btn {
   .intro {
     background: darken(@theme-color, 5%);
     padding-top: 90px;
-    padding-bottom: 60px;
+    padding-bottom: 16px;
     position: relative;
     font-size: 16px;
   }
@@ -202,6 +202,7 @@ a.btn {
     }
   }
 }
+
 /* Page Nav */
 .page-nav-space-holder {
   height: 60px;
@@ -215,7 +216,7 @@ a.btn {
   position: absolute;
   width: 100%;
   left: 0;
-  .box-shadow(0 4px 12px rgba(0,0,0,.2));
+  .box-shadow(0 4px 12px rgba(0, 0, 0, .2));
 
   &.fixed {
     position: fixed;
@@ -281,14 +282,28 @@ a.btn {
 }
 
 .section {
-  .box-shadow(0 1px 4px 0 rgba(0,0,0,0.14));
-  padding: 45px;
+  .box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+  padding: 24px;
   background: #fff;
-  margin-bottom: 45px;
+  margin-bottom: 24px;
   .border-radius(2px);
+  position: relative;
+
+  h2 {
+    text-align: left;
+    background-color: white;
+    position: sticky;
+    color: darken(@theme-color, 40%);
+    padding: 12px 0px 0px 24px;
+    margin: -24px -24px 12px -24px;
+  }
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  h4 {
+    color: darken(@theme-color, 20%);
   }
 }
 
@@ -306,6 +321,7 @@ a.btn {
   position: relative;
   padding: 0 30px;
   margin-left: 280px;
+  margin-top: 32px;
 
   .item {
     position: relative;
@@ -387,13 +403,16 @@ a.btn {
 
     .tags-container {
       .skill-tag {
-        .box-shadow(0 1px 1px 0 rgba(0,0,0,0.14));
+        .box-shadow(0 1px 1px 0 rgba(0, 0, 0, 0.14));
         padding: 3px 4px;
         display: inline-block;
+        align-items: center;
+        vertical-align: text-top;
         margin: 2px 2px 4px 0;
-        border: 1px solid @smoky-white;
+        border: 1px solid gray;
+        border-radius: 4px;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 9px;
       }
     }
   }
@@ -474,7 +493,7 @@ a.btn {
   }
 
   .skill-tag {
-    .box-shadow(0 1px 4px 0 rgba(0,0,0,0.14));
+    .box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
     padding: 6px 30px;
     display: inline-block;
     margin-right: 10px;
@@ -615,7 +634,7 @@ a.btn {
     color: #fff;
     .border-radius(2px);
     position: relative;
-    .box-shadow(0 1px 4px 0 rgba(0,0,0,0.14));
+    .box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
 
     &:hover {
       background: lighten(@theme-color, 2%);
@@ -756,12 +775,19 @@ a.btn {
 }
 
 .publications-section {
-  h2 {
-    margin-bottom: 4px;
+  overflow: hidden;
+
+  h4 {
+    margin: 8px 0px 0px 0px;
+  }
+
+  .legend {
+    margin-top: 32px;
   }
 
   .publication {
     padding: 4px;
+    padding-left: 8px;
 
     &:not(:last-of-type) {
       border-bottom: 1px solid whitesmoke;
@@ -780,10 +806,12 @@ a.btn {
     align-items: center;
     justify-content: center;
     margin-bottom: 16px;
+
     @media (max-width: 500px) {
       flex: 1;
       align-self: stretch;
     }
+
     @media (max-width: 360px) {
       flex-direction: column;
       align-items: stretch;
@@ -795,6 +823,7 @@ a.btn {
       align-items: center;
       justify-content: center;
       padding: 0 4px;
+
       @media (max-width: 500px) {
         flex: 1;
       }
@@ -802,7 +831,7 @@ a.btn {
       .biblio-param {
         flex: 1;
         background-color: white;
-        .box-shadow(0 1px 4px 0 rgba(0,0,0,0.14));
+        .box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
         text-align: center;
         padding: 4px;
 

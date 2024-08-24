@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     /* ======= Scrollspy ======= */
-   $('body').scrollspy({ target: '#page-nav-wrapper', offset: 100});
+   $('body').scrollspy({ target: '#page-nav-wrapper', offset: 130});
     
     /* ======= ScrollTo ======= */
     $('.scrollto').on('click', function(e){
@@ -11,7 +11,7 @@ $(document).ready(function() {
                 
         e.preventDefault();
         
-		$('body').scrollTo(target, 800, {offset: -60, 'axis':'y'});
+		$('body').scrollTo(target, 800, {offset: -120, 'axis':'y'});
 		
 	});
 	
