@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scadenze</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 2.5rem;
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+
+    #results {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    #results p {
+      font-size: 1.2rem;
+      color: #555;
+      margin: 10px 0;
+      border-bottom: 1px solid #ddd;
+      /* padding-bottom: 10px; */
+      text-align: center;
+    }
+
+    #results p:last-child {
+      border-bottom: none;
+    }
+
+    .fab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      outline: none;
+    }
+
+    .fab:hover {
+      background-color: #0056b3;
+    }
+
+    #form-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    #form-container form label {
+      display: block;
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    #form-container form input,
+    #form-container form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    #form-container form button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #form-container form button:hover {
+      background-color: #0056b3;
+    }
+
+    #excluded-dates {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    #excluded-dates ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #excluded-dates li {
+      margin: 5px 0;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const datesWithTitles = JSON.parse(localStorage.getItem('datesWithTitles')) || [];
+      const excludedRanges = JSON.parse(localStorage.getItem('excludedRanges')) || [];
+
+      function isBusinessDay(date) {
+        const day = date.getDay();
+        const formattedDate = date.toISOString().split('T')[0];
+        for (const range of excludedRanges) {
+          const start = new Date(range.start);
+          const end = new Date(range.end);
+          if (date >= start && date <= end) {
+            return false;
+          }
+        }
+        return day !== 0 && day !== 6;
+      }
+
+      function countBusinessDays(startDate, endDate) {
+        let count = 0;
+        const currentDate = new Date(startDate);
+
+        while (currentDate <= endDate) {
+          if (isBusinessDay(currentDate)) {
+            count++;
+          }
+          currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        return count;
+      }
+
+      function updateResults() {
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = '';
+        const today = new Date();
+
+        datesWithTitles.forEach(({
+          date,
+          title
+        }) => {
+          const targetDate = new Date(date);
+          const businessDays = countBusinessDays(today, targetDate);
+          const result = document.createElement('p');
+          result.textContent = `${title}: ${businessDays} giorni lavorativi fino al ${date}`;
+          resultsContainer.appendChild(result);
+        });
+      }
+
+      function updateExcludedDatesList() {
+        const excludedDatesContainer = document.getElementById('excluded-dates');
+        excludedDatesContainer.innerHTML = '<ul>' + excludedRanges.map(range =>
+          `Non Lavorativi: <li>dal ${range.start} al ${range.end}</li>`).join('') + '</ul>';
+      }
+
+      function addDate(event) {
+        event.preventDefault();
+        const title = document.getElementById('date-title').value;
+        const date = document.getElementById('date-value').value;
+        if (title && date) {
+          datesWithTitles.push({
+            title,
+            date
+          });
+          localStorage.setItem('datesWithTitles', JSON.stringify(datesWithTitles));
+          updateResults();
+          event.target.reset();
+          document.getElementById('form-container').style.display = 'none';
+        }
+      }
+
+      function addExcludedRange(event) {
+        event.preventDefault();
+        const start = document.getElementById('exclude-start').value;
+        const end = document.getElementById('exclude-end').value;
+        if (start && end) {
+          excludedRanges.push({
+            start,
+            end
+          });
+          localStorage.setItem('excludedRanges', JSON.stringify(excludedRanges));
+          updateExcludedDatesList();
+          event.target.reset();
+        }
+      }
+
+      document.getElementById('date-form').addEventListener('submit', addDate);
+      document.getElementById('exclude-form').addEventListener('submit', addExcludedRange);
+
+      document.querySelector('.fab').addEventListener('click', () => {
+        const formContainer = document.getElementById('form-container');
+        formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
+      });
+
+      updateResults();
+      updateExcludedDatesList();
+    });
+  </script>
+</head>
+
+<body>
+  <h1>Scadenze</h1>
+
+  <div id="form-container">
+    <form id="date-form">
+      <label for="date-title">Event Title</label>
+      <input type="text" id="date-title" placeholder="Enter event title" required>
+
+      <label for="date-value">Event Date</label>
+      <input type="date" id="date-value" required>
+
+      <button type="submit">Add Event</button>
+    </form>
+
+    <form id="exclude-form">
+      <label for="exclude-start">Exclude Start Date</label>
+      <input type="date" id="exclude-start" required>
+
+      <label for="exclude-end">Exclude End Date</label>
+      <input type="date" id="exclude-end" required>
+
+      <button type="submit">Add Excluded Range</button>
+    </form>
+  </div>
+
+  <div id="results"></div>
+
+  <div id="excluded-dates">
+    <strong>Giorni Esclusi da Conteggio:</strong>
+  </div>
+
+  <button class="fab">+</button>
+</body>
+
+</html>
