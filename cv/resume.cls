@@ -106,6 +106,19 @@
   \end{list}
 }
 
+\newenvironment{rSectionLower}[1]{ % 1 input argument - section name
+  \sectionskip
+  {\bf #1} % Section title
+  \sectionlineskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{1.5em} % Margin within the section
+  }
+  \item[]
+}{
+  \end{list}
+}
+
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
