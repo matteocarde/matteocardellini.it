@@ -26,6 +26,8 @@
 \usepackage[italian]{babel}
 \usepackage{comment}
 \usepackage{enumitem}
+\usepackage{makecell}
+\usepackage{booktabs}
 \setlist{nosep}
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \usepackage{natbib, bibentry}
@@ -64,21 +66,80 @@
 	I obtained my PhD in the National PhD in Artificial Intelligence (Administrative site: Polytechnic University of Turin, Working site: University of Genoa) with a grant titled "Planning and Scheduling Based on Artificial Intelligence Methodologies in the Railway Domain". I was awarded the title with honors on January 9, 2025, with the thesis "Symbolic Pattern Planning".
 \end{rSection}
 \begin{rSection}{Teaching}
-	\begin{tabularx}{0.95\textwidth} {lp{14cm}}
- \textbf{2026} & AI-Based Planning. 12h. 3CFU. PhD in Security, Risk and Vulnerability. University of Genoa.  \\
- \textbf{2025} & Algorithms. 48h. 6CFU. Bachelor's Degree in Computer Engineering (L-8). University of Genoa.  \\
- \textbf{2025} & AI-Based Planning. 12h. 3CFU. PhD in Security, Risk and Vulnerability. University of Genoa.  \\
- \textbf{2025} & Artificial Intelligence for Robotics II. 20h. 2.5CFU. ING-INF/05. Master’s Degree in Robotics Engineering (LM-32). University of Genoa.  \\
-  \textbf{2025} & Artificial Intelligence. 8h. 1CFU. ING-INF/05. Master’s Degree in Computer Engineering (LM-32). University of Genoa.  \\
-  \textbf{2025} & Fundamentals of Computer Science. 70h. 7CFU. ING-INF/05. Bachelor’s Degree in Electrical Engineering (L-9) and Chemical and Process Engineering (L-9). University of Genoa.  \\
+
+\begin{tabularx}{0.95\textwidth}{
+  @{}
+  >{\centering\arraybackslash}p{3cm}
+  >{\raggedright\arraybackslash}X
+  @{}
+}
+
+\makecell[t]{
+  \textbf{\textsc{a.y. 2025/26}} \\
+  \textbf{\textsc{a.y. 2026/27}}
+}
+&
+Artificial Intelligence. 12h. 1CFU. ING-INF/05.
+Master’s Degree in Computer Engineering (LM-32).
+University of Genoa.
+\\
+\specialrule{0.1pt}{0.2em}{0.2em}
+
+\makecell[t]{
+  \textbf{\textsc{a.y. 2024/25}} \\
+  \textbf{\textsc{a.y. 2025/26}} \\
+  \textbf{\textsc{a.y. 2026/27}}
+}
+&
+AI-Based Planning. 12h. 3CFU.
+PhD in Security, Risk and Vulnerability.
+University of Genoa.
+\\
+\specialrule{0.1pt}{0.2em}{0.2em}
+
+\makecell[t]{
+  \textbf{\textsc{a.y. 2025/26}} \\
+  \textbf{\textsc{a.y. 2026/27}}
+}
+&
+Algorithms. 48h. 6CFU.
+Bachelor's Degree in Computer Engineering (L-8).
+University of Genoa.
+\\
+\specialrule{0.1pt}{0.2em}{0.2em}
+
+\textbf{\textsc{a.y. 2024/25}}
+&
+Artificial Intelligence for Robotics II. 20h. 2.5CFU.
+ING-INF/05. Master’s Degree in Robotics Engineering (LM-32).
+University of Genoa.
+\\
+\specialrule{0.1pt}{0.2em}{0.2em}
+
+\textbf{\textsc{a.y. 2024/25}}
+&
+Artificial Intelligence. 8h. 1CFU. ING-INF/05.
+Master’s Degree in Computer Engineering (LM-32).
+University of Genoa.
+\\
+\specialrule{0.1pt}{0.2em}{0.2em}
+
+\textbf{\textsc{a.y. 2024/25}}
+&
+Fundamentals of Computer Science. 70h. 7CFU. ING-INF/05.
+Bachelor’s Degree in Electrical Engineering (L-9)
+and Chemical and Process Engineering (L-9).
+University of Genoa.
+
 \end{tabularx}
-\pagebreak
+
 \end{rSection}
+\pagebreak
 \begin{rSection}{Tutoring}
 	\begin{tabularx}{0.95\textwidth} {lp{14cm}}
- \textbf{2024} & Fundamentals of Computer Science. 30h. ING-INF/05. Nautical Engineering. University of Genoa.  \\
- \textbf{2023} & Fundamentals of Computer Science. 30h. ING-INF/05. Nautical Engineering. University of Genoa.  \\
- \textbf{2022} & Databases. 20h. ING-INF/05. Computer Engineering. University of Genoa \end{tabularx}
+\textbf{\textsc{a.y. 2023/24}} & Fundamentals of Computer Science. 30h. ING-INF/05. Nautical Engineering. University of Genoa.  \\
+\textbf{\textsc{a.y. 2022/23}} & Fundamentals of Computer Science. 30h. ING-INF/05. Nautical Engineering. University of Genoa.  \\
+\textbf{\textsc{a.y. 2021/22}} & Databases. 20h. ING-INF/05. Computer Engineering. University of Genoa \end{tabularx}
 \end{rSection}
 \begin{rSection}{Thesis Supervisor or Co-Supervisor}
 	\begin{tabularx}{0.95\textwidth} {lp{14cm}}
@@ -132,7 +193,7 @@ I carried out research activities within the following national projects:\\
 \begin{rSection}{Talks at International Conferences}
 	\begin{tabularx}{0.95\textwidth} {lp{14cm}}
  \textbf{2026-07-21} & International Conference on Principles of Knowledge Representation and Reasoning (\textsc{kr}). Lisbon, Portugal.\\
- \textbf{2026-07-1} & International Conference on Planning and Scheduling (\textsc{icaps}). Dublin, Ireland.\\
+ \textbf{2026-07-01} & International Conference on Planning and Scheduling (\textsc{icaps}). Dublin, Ireland.\\
  \textbf{2025-11-17} & International Conference on Principles of Knowledge Representation and Reasoning (\textsc{kr}). Melbourne, Australia.\\
  \textbf{2025-11-12} & International Conference on Planning and Scheduling (\textsc{icaps}). Melbourne, Australia.\\
  \textbf{2025-11-11} & Tutorial at the International Conference on Planning and Scheduling (\textsc{icaps}). Melbourne, Australia.\\
@@ -161,18 +222,21 @@ I carried out research activities within the following national projects:\\
   \end{tabularx}
 \end{rSection}
 
+\clearpage
+
  \begin{rSection}{Third Mission and Dissemination}
  \begin{tabularx}{0.95\textwidth} {lp{14cm}}
+\textbf{2027} & Corso di 2h dal Titolo "\textsc{ai} - Dove Siamo" per UnigeSenior presso Università di Genova \\
 \textbf{2023} & Interview in UniGe.life regarding the Leonardo Lesmo Award for the best Italian Master’s thesis and for my work in AI-based railway transportation.  \\
 &\url{https://life.unige.it/trasporti-ferroviari-efficienti-IA} \\ 
   \end{tabularx}
 \end{rSection}
 
-\break
 \begin{rSection}{Articles in International Journals}
 \begin{enumerate}[leftmargin=5mm]
-	%\item[J6] \textbf{Symbolic Pattern Temporal Numeric Planning with Intermediate Conditions and Effects}. M. Cardellini, E. Giunchiglia - Artificial Intelligence Journal (\textit{Under review}) - Scimago: Q1 on Artificial Intelligence.
-	%\item[J5] \textbf{Exploiting Search in Symbolic Numeric Planning with Patterns}. M. Cardellini, E. Giunchiglia - Journal of Artificial Intelligence Research (\textit{Under review}) - Scimago: Q1 on Artificial Intelligence.
+	\item[J7] \textbf{Artificial Intelligence-Based Planning for the In-Station Train Dispatching Problem}. M. Cardellini, E. Giunchiglia, D. Anguita, C. Lofiego, L. Oneto, and P. Ratto - Artificial Intelligence Journal (\textit{Under review after first revision}) - Scimago: Q1 on Artificial Intelligence.
+	\item[J6] \textbf{Symbolic Pattern Temporal Numeric Planning with Intermediate Conditions and Effects}. M. Cardellini and E. Giunchiglia - Artificial Intelligence Journal (\textit{Under review after first revision}) - Scimago: Q1 on Artificial Intelligence.
+	\item[J5] \textbf{Exploiting Search in Symbolic Numeric Planning with Patterns}. M. Cardellini and E. Giunchiglia - Journal of Artificial Intelligence Research (\textit{Under review after first revision}) - Scimago: Q1 on Artificial Intelligence.
 	\item[J4] \textbf{Symbolic Pattern Planning}. M. Cardellini, E. Giunchiglia and M. Maratea - Artificial Intelligence, Volume 352, March 2026 - Scimago: Q1 on Artificial Intelligence.
 	\item[J3] \textbf{Optimising Dynamic Traffic Distribution for Urban Networks with Answer Set Programming}. M. Cardellini, C. Dodaro, M. Maratea and M. Vallati - Theory and Practice of Logic Programming,  Volume 24, Issue 4, July 2024, pp. 825-843 - Scimago: Q2 on Artificial Intelligence
 	\item[J2] \textbf{Solving Rehabilitation Scheduling Problems via a Two-Phase ASP approach}. M. Cardellini, P. De Nardi, C. Dodaro, G. Galat\`a, A. Giardini, M. Maratea, I. Porro. Theory and Practice of Logic Programming, Volume 24, Issue 2, March 2024, pp. 344-367 - Scimago: Q2 on Artificial Intelligence
@@ -183,7 +247,7 @@ I carried out research activities within the following national projects:\\
 \begin{tabular}{|c||c|c|c|c|}
 	\hline
 Scimago Rank&Q1 & Q2 & Q3 & Q4 \\ \hline
-Nr. Articles &1 & 3 & 0 & 0 \\ \hline
+Nr. Articles &4 & 3 & 0 & 0 \\ \hline
 \end{tabular}%
 \end{center}
 \end{rSection}
@@ -239,14 +303,19 @@ Nr. Articles&8  & 2 & 3 \\ \hline
  \textbf{2024$\rightarrow$} & Part of the "FORmal Methods and logic in Action (FORMA)" group at the University of Genoa.
   \end{tabularx}
  \end{rSection}
+
+  \begin{rSection}{Member of Editorial Boards}
+	\begin{tabularx}{0.95\textwidth} {lp{14cm}}
+ \textbf{2026} & Guest Reviewer. Artificial Intelligence Journal \\
+ \textbf{2025} & Guest Reviewer. Journal of Applied Logic
+  \end{tabularx}
+ \end{rSection}
  
  
   \begin{rSection}{Member of Program Committees}
 	\begin{tabularx}{0.95\textwidth} {lp{14cm}}
- \textbf{2025} & Reviewer. European Conference of Artificial Intelligence \\
- \textbf{2025} & Reviewer. Journal of Applied Logic \\
- \textbf{2023-2026} & Reviewer. International Conference on Automated Planning and Scheduling \\
- \textbf{2023-2026} & Reviewer. International \textsc{aaai} Conference on Artificial Intelligence 
+ \textbf{2023-2027} & PC Member. International Conference on Automated Planning and Scheduling \\
+ \textbf{2023-2027} & PC Member. International \textsc{aaai} Conference on Artificial Intelligence 
   \end{tabularx}
  \end{rSection}
  
@@ -275,54 +344,12 @@ Nr. Articles&8  & 2 & 3 \\ \hline
 \begin{tabular}{ccc}
 
  & Google Scholar & SCOPUS \\ \hline
-\multicolumn{1}{c}{Number of Articles in 5 years} & 25 & 20 \\ \hline
-\multicolumn{1}{c}{Number of Citations in 10 years} & 213 & 139 \\ \hline
-\multicolumn{1}{c}{H-Index in 10 years} & 
-8 & 7 \\ 
+\multicolumn{1}{c}{Number of Articles in 5 years} & 25 & 21 \\ \hline
+\multicolumn{1}{c}{Number of Citations in 10 years} & 225 & 146 \\ \hline
+\multicolumn{1}{c}{h-index in 10 years} & 
+9 & 7 \\ 
 \end{tabular}%
 \end{center}
 \end{rSection}
 
-%
-%\pagebreak
-%Di seguito le 11 pubblicazioni più la tesi di dottorato che chiedo siano considerate per la valutazione.
-%
-%\begin{rSection}{Articoli su riviste internazionali}
-%\begin{enumerate}[leftmargin=5mm]
-%	\item[V1] \textbf{Optimising Dynamic Traffic Distribution for Urban Networks with Answer Set Programming}. M. Cardellini, C. Dodaro, M. Maratea and M. Vallati - Theory and Practice of Logic Programming,  Volume 24, Issue 4, July 2024, pp. 825-843 - Scimago: Q2 on Artificial Intelligence
-%	\item[V2] \textbf{Solving Rehabilitation Scheduling Problems via a Two-Phase ASP approach}. M. Cardellini, P. De Nardi, C. Dodaro, G. Galat\`a, A. Giardini, M. Maratea, I. Porro. Theory and Practice of Logic Programming, Volume 24, Issue 2, March 2024, pp. 344-367 - Scimago: Q2 on Artificial Intelligence
-%	\item[V3] \textbf{Rescheduling Rehabilitation Sessions with Answer Set Programming}. M. Cardellini, C. Dodaro, G. Galat\`a, A. Giardini, M. Maratea, N. Nisopoli and I. Porro. Journal of Logic and Computation, Volume 33, Issue 3, April 2023, pp. 837-863 - Scimago: Q2 on Logic
-%\end{enumerate}
-%\end{rSection}
-% 
-%\begin{rSection}{contributi a convegni internazionali}
-%\begin{enumerate}[leftmargin=5mm]
-%	\item[V4] \textbf{Rolling in Classical Planning with Conditional Effects and Constraints}. M. Cardellini, and E. Giunchiglia. Proceedings of the 34th International Joint Conference on Artificial Intelligence. \textsc{ijcai}, 2025 - GGS: A$^{++}$, \textsc{core}: A$^{++}$
-%
-%	\item[V5] \textbf{Initial Condition Retrieving for Hybrid and Numeric Planning Problems}. M. Cardellini, M. Maratea, F. Percassi and M. Vallati. Proceedings of the 35th International Conference on Automated Planning and Scheduling. \textsc{aaai} Press, 2025 - GGS: A, \textsc{core}: A$^{++}$
-%	
-%	
-%	\item[V6] \textbf{Temporal Numeric Planning with Patterns}. M. Cardellini and E. Giunchiglia. Proceedings of the 39th Annual \textsc{aaai} Conference on Artificial Intelligence. \textsc{aaai} Press, 2025 - GGS: A$^{++}$, \textsc{core}: A$^{++}$
-%	
-%	\item[V7] \textbf{Taming Discretised PDDL+ through Multiple Discretisations}. M. Cardellini, M. Maratea, F. Percassi, E. Scala and M. Vallati. Proceedings of the 34th International Conference on Automated Planning and Scheduling. \textsc{aaai} Press, 2024 - GGS: A, \textsc{core}: A$^{++}$
-%	
-%	\item[V8] \textbf{Symbolic Numeric Planning With Patterns}. M. Cardellini, E. Giunchiglia and M. Maratea. Proceedings of the 38th Annual \textsc{aaai} Conference on Artificial Intelligence. \textsc{aaai} Press, 2024 - GGS: A$^{++}$, \textsc{core}: A$^{++}$
-%	
-%	\item[V9] \textbf{A Framework for Risk-Aware Routing of Connected Autonomous Vehicles via Artificial Intelligence}. M. Cardellini, C. Dodaro, M. Maratea, and M. Vallati. In Proceedings of the 26th IEEE International Conference on Intelligent Transportation Systems. IEEE, 2023 - MA: A$^-$
-%	
-%	
-%	\item[V10] \textbf{In-Station Train Movements Prediction: from Shallow to Deep Multi Scale Models}. G. Boleto, L. Oneto, M. Cardellini, M. Maratea, M. Vallati, R. Canepa, D. Anguita. In Proceedings of the 29th European Symposium on Artificial Neural Networks. i6doc, 2021 - GGS: B, \textsc{core}: B
-%	
-%	\item[V11] \textbf{In-Station Train Dispatching: A PDDL+ Planning Approach}. M. Cardellini, M. Maratea, M. Vallati, G. Boleto, and L. Oneto. Proceedings of the 31st International Conference on Automated Planning and Scheduling. \textsc{aaai} Press, 2021 - GGS: A, \textsc{core}: A$^{++}$
-%\end{enumerate}
-%\end{rSection}
-%
-% \begin{rSection}{tesi di dottorato}
-%  \begin{enumerate}[leftmargin=5mm]
-%	\item[V12] \textbf{Symbolic Pattern Planning}. M. Cardellini. Discussa il 9 Gennaio 2025.	
-%	\end{enumerate}
-% \end{rSection}
-
-
 \end{document}
-You
